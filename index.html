@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- There are bunch of alternate themes in css/theme -->
+    <link rel="stylesheet" href="css/theme/amtheme.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style>
+      .twitter-tweet {
+
+      }
+      iframe.fiddle {
+        transform: translateY(50%) scale(2.3);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+        <section>
+          <h1>Hej</h1>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+            alert("Yoyoyo!");
+            alert("Yoyoyo!");
+            alert("Yoyoyo!");
+            alert("Yoyoyo!");
+            alert("Yoyoyo!");
+          </code></pre>
+        </section>
+        <section>
+          <blockquote class="twitter-tweet"><p>Happy 50th anniversary to the Wilderness Act! Here's a great wilderness photo from <a href="https://twitter.com/YosemiteNPS">@YosemiteNPS</a>. <a href="https://twitter.com/hashtag/Wilderness50?src=hash">#Wilderness50</a> <a href="http://t.co/HMhbyTg18X">pic.twitter.com/HMhbyTg18X</a></p>— US Dept of Interior (@Interior) <a href="https://twitter.com/Interior/status/507185938620219395">September 3, 2014</a></blockquote>
+          <blockquote class="twitter-tweet"><p>Happy 50th anniversary to the Wilderness Act! Here's a great wilderness photo from <a href="https://twitter.com/YosemiteNPS">@YosemiteNPS</a>. <a href="https://twitter.com/hashtag/Wilderness50?src=hash">#Wilderness50</a></blockquote>
+        </section>
+        <section>
+          <iframe width="100%" height="900" src="//jsfiddle.net/xBB5x/2511/embedded/js,html,result/presentation/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </section>
+        <section>
+          <iframe class="fiddle" width="50%" height="430" src="//jsfiddle.net/8r4greaz/30/embedded/js,html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </section>
+        <section>
+          <h1>Hej</h1>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at: https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        "controls": false,
+        "progress": false,
+        "history": true,
+        "center": false,
+        "width": 1600,
+        "height": 900,
+        "margin": 0.1,
+
+        "transition": "slide", // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        "dependencies": [
+          {
+            "src": "lib/js/classList.js",
+            "condition": function () {
+              return !document.body.classList;
+            }
+          }, {
+            "src": "plugin/highlight/highlight.js",
+            "async": true,
+            "condition": function () {
+              return !!document.querySelector("pre code");
+            },
+            "callback": function () {
+              hljs.initHighlightingOnLoad();
+            }
+          }, {
+            "src": "plugin/zoom-js/zoom.js",
+            "async": true
+          }, {
+            "src": "plugin/notes/notes.js",
+            "async": true
+          }
+        ]
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        Reveal.configure({
+          "keyboard": {
+            40: "next", // down moves to next slide - for my clicker
+            38: "prev", // up moves to previous slide - for my clicker
+          }
+        });
+      });
+
+      /**
+
+      var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+
+// Hack to pass bytes through unprocessed.
+xhr.overrideMimeType('text/plain; charset=x-user-defined');
+
+xhr.onreadystatechange = function(e) {
+  if (this.readyState == 4 && this.status == 200) {
+    var binStr = this.responseText;
+    for (var i = 0, len = binStr.length; i < len; ++i) {
+      var c = binStr.charCodeAt(i);
+      //String.fromCharCode(c & 0xff);
+      var byte = c & 0xff;  // byte at offset i
+    }
+  }
+};
+
+xhr.send();
+**/
+    </script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>
